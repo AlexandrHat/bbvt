@@ -52,12 +52,24 @@ Container::make('post_meta', 'Категории')
 Container::make('post_meta', 'Выгоды')
 ->show_on_page('36')
 ->add_fields(array(	
+	Field::make('text', 'reason_title', 'Заголовок выгоды'),
  Field::make( 'complex', 'features', 'Выгода' ) 
  ->set_duplicate_groups_allowed( true )
-	->add_fields( array(	
-  Field::make( 'text', 'number', 'Цифра нумерации' )->set_default_value( $default_value ),		
+	->add_fields( array(	  
 		Field::make( 'text', 'descr', 'Описание выгоды' )->set_width( 80 ),
-  Field::make('uniqid', 'my_field_name'),
+  
+
+	) )
+));
+
+Container::make('post_meta', 'Популярная мебель')
+->show_on_page('36')
+->add_fields(array(	
+	Field::make('text', 'popular_title', 'Заголовок '),
+ Field::make( 'complex', 'popular_furniture', 'Мебель' ) 
+ ->set_duplicate_groups_allowed( true )
+	
+  
 
 	) )
 ));

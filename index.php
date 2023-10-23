@@ -127,7 +127,9 @@ get_header();
  </section>
  <section class="reason">
   <div class="main-wrap">
-    <h2>5 причин заказать мебель у нас:</h2>
+    <h2>
+    <?php echo carbon_get_post_meta('36','reason_title');?>
+    </h2>
     <div class="reason-wrap">
 
 
@@ -136,13 +138,13 @@ get_header();
       $features = carbon_get_post_meta( get_the_ID(), 'features' );
       if( $features ) {
         foreach( $features as $feature ) {          
-                
+          $counter++;       
         ?> 
 
 
       <div class="reason-item">
         <div class="reason-item-header">
-          <?php echo $feature[ 'my_field_name' ]  ?>
+          <?php echo $counter;  ?>
         </div>
         <div class="reason-item-descr">
           <?php echo $feature[ 'descr' ]  ?>
