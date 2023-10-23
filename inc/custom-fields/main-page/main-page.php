@@ -69,9 +69,6 @@ Container::make('post_meta', 'Популярная мебель')
  Field::make( 'complex', 'popular_furniture', 'Мебель' ) 
  ->set_duplicate_groups_allowed( true )
 	
-  
-
-	) )
 ));
 
 
